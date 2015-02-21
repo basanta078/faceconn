@@ -100,3 +100,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   $urlRouterProvider.otherwise('/tab/dash');
 
 });
+
+
+angular.module('starter.controllers', []);
+angular.module('starter.services', []);
