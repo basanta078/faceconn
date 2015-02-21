@@ -6,5 +6,8 @@
         <h2>{{friend.name}}</h2>
       </ion-item>
     </ion-list>
+
+    <button ng-click="getPhoto()" class="button button-block button-primary">Take Photo</button>
+    <img ng-src="{{lastPhoto}}" style="max-width: 100%">
   </ion-content>
 </ion-view>
