@@ -1,0 +1,44 @@
+<ion-view view-title="Admin">
+  <ion-content>
+   <!--  <ion-list>
+      <label style="margin-top: 50px" class="item item-input">
+        <input type="text" placeholder="First Name">
+      </label>
+      <label class="item item-input">
+        <input type="text" placeholder="Last Name">
+      </label>
+      <label class="item item-input">
+        <textarea placeholder="Comments"></textarea>
+      </label>
+      <button class="button button-positive">
+        button-positive
+      </button>
+
+      <form method="post" enctype="multipart/form-data">
+        <input type="file" id="#takepic" accept="image/*;capture=camera">
+        <img id="blah" src="#" alt="an image?" />
+      </form>
+    </ion-list> -->
+      
+  <ion-list>
+    <div class="item item-divider">
+      Unrecognizable People
+    </div>
+    <a class="item item-thumbnail-left" href="#" ng-repeat="b in bad" style="background-color:red">
+        <img src="{{b.Url}}">
+        <h2 style="color:white">Suspicious person</h2>
+        <p>was spotted at {{b.Time}}</p>
+    </a>  
+    </div>
+    <div class="item item-divider">
+        Recognizeable People
+      </div>
+        <a class="item item-thumbnail-left" href="#" ng-repeat="g in good">
+          <img src="{{g.Url}}">
+          <h2>{{g.Name}}</h2>
+          <p>has arrived at {{g.Time}}</p>
+        </a>
+  </ion-list>
+  
+  </ion-content>
+</ion-view>

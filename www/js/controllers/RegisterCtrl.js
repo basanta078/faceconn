@@ -1,7 +1,7 @@
 angular.module('starter.controllers')
 
 .controller('RegisterCtrl', function($scope, Chats, Azure, Camera) {
-  $scope.lastPhot = ''
+  $scope.lastPhoto = ''
 
   $scope.getPhoto = function() {
     console.log('Getting camera');

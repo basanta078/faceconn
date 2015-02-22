@@ -9,8 +9,25 @@ angular.module('starter.services')
 	    self.appUrl,
 	    self.appKey
 	);
-	self.UserTable = self.client.getTable("Users");
 
+    self.client2 = new WindowsAzure.MobileServiceClient(
+        self.appUrl,
+        self.appKey
+    );
+	self.UserTable = self.client.getTable("Users");
+    self.PersonTable = self.client2.getTable("Person");
+    
+        
+    self.RetrievePerson = function(callback) {
+        var query = self.PersonTable.select("Name", "Familiar", "__createdAt", "ImageUrl","Gender").read().done(function (results) {
+          callback(results);
+        }, function (err) {
+          console.log("Error: " + err);
+        });
+    }
+    self.AddPerson = function(callback) {
+        PersonTable.insert(item);
+    }
 	self.GetProfiles = function (callback){
 		var query = self.UserTable.select("id").read().done(function (results) {
 		  console.log(results);
