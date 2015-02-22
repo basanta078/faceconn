@@ -17,6 +17,18 @@ angular.module('starter.services')
 		}, function (err) {
 		  console.log("Error: " + err);
 		});
-	}
+	};
+
+	self.Insert = function(nameA){
+		var DemoTable = self.client.getTable("Demo");
+
+		var item = { userName: nameA , containerName: "images"};
+		DemoTable.insert(item).then(function (item) {
+                if (item.sasQueryString !== undefined) {
+                    console.debug("Query string: " + item.imageUri);
+
+                }
+            });
+	};
 
 });

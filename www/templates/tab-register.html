@@ -1,11 +1,11 @@
 <ion-view view-title="Register">
   <ion-content>
     <label class="item item-input">
-      <span class="input-label">Name</span>
-      <input type="text">
+      <span class="input-label" >Name</span>
+      <input type="text" ng-model="name">
     </label>
 
-    <button ng-click="getPhoto()" class="button button-block button-primary">Register</button>
+    <button ng-click="getPhoto(name)" class="button button-block button-primary">Register</button>
     <img ng-src="{{lastPhoto}}" style="max-width: 100%">
   </ion-content>
 </ion-view>
