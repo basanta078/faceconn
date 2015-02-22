@@ -90,6 +90,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       }
     })
 
+  .state('tab.admin', {
+    url: '/admin',
+    views: {
+      'tab-admin': {
+        templateUrl: 'templates/tab-admin.html',
+        controller: 'AdminCtrl'
+      }
+    }
+  })
+
   .state('tab.account', {
     url: '/account',
     views: {
