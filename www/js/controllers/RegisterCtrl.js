@@ -1,8 +1,7 @@
 angular.module('starter.controllers')
 
-.controller('FriendsCtrl', ['$scope', 'Friends', 'Camera', 'Azure', function($scope, Friends, Camera, Azure) {
-  $scope.friends = Friends.all();
-  
+.controller('RegisterCtrl', function($scope, Chats) {
+
   $scope.getPhoto = function() {
     console.log('Getting camera');
     Camera.getPicture().then(function(imageURI) {
@@ -15,10 +14,6 @@ angular.module('starter.controllers')
 	      targetWidth: 320,
 	      targetHeight: 320,
 	      saveToPhotoAlbum: false
-    });
-
-
-  };
-
-
-}]);
+    	});
+	};
+});
